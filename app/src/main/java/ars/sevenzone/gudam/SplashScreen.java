@@ -25,7 +25,22 @@ public class SplashScreen extends Activity {
             @Override
             public void run() {
                 Intent intent = new Intent(getApplication(), MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         };
+    }
+
+    public void onResume(){
+        super.onResume();
+        delay_time = time;
+        handler.postDelayed(runnable, delay_time);
+        time = System.currentTimeMillis();
+    }
+
+    public void onPause(){
+        super.onPause();
+        handler.removeCallbacks(runnable);
+        time = delay_time - (System.currentTimeMillis() - time);
     }
 }

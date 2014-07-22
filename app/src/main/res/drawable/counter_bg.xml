@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:shape="rectangle">
+    
+    <!-- view backgournd color -->
+    <solid android:color="@color/counter_text_bg"></solid>
+    
+    <!-- if your want to add some padding -->
+    <padding 
+        android:left="3dp"
+        android:right="3dp">
+    </padding>
+    
+    <!-- corner radius -->
+    <corners android:radius="2dp"></corners>
+    
+</shape>
